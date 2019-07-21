@@ -4,7 +4,9 @@
   "description": "hero management system",
   "main": "index.js",
   "scripts": {
-    "test": "protractor conf.js"
+    "test": "protractor conf.js",
+    "webdriver-update": "webdriver-manager update",
+    "smoke": "protractor conf.js --grep @smoke"
   },
   "repository": {
     "type": "git",
@@ -18,5 +20,12 @@
   "bugs": {
     "url": "https://github.com/TayJacon/heroesProject/issues"
   },
-  "homepage": "https://github.com/TayJacon/heroesProject#readme"
+  "homepage": "https://github.com/TayJacon/heroesProject#readme",
+  "devDependencies": {
+    "allure-commandline": "^2.9.0",
+    "jasmine": "^3.4.0",
+    "jasmine-allure-reporter": "^1.0.2",
+    "jasmine-spec-reporter": "^4.2.1",
+    "protractor": "^5.4.2"
+  }
 }

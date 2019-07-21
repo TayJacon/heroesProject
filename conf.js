@@ -3,8 +3,10 @@
 exports.config = {
     directConnect: true,
     framework: 'jasmine2',
-    // specs: ['specs/*_spec.js'],
+    specs: ['specs/*_spec.js'],
     suites: {
+        add: 'specs/add_spec.js',
+        list: 'specs/list_spec.js'
     },
     baseUrl: 'http://heroes.qanw.com.br',
     onPrepare: function() {
@@ -52,6 +54,9 @@ exports.config = {
         }));
     },
     capabilities: {
-        'browserName': 'chrome'
+        'browserName': 'chrome',
+        chromeOptions: {
+            args: ['--start-maximized']
+        }
     }
 }
