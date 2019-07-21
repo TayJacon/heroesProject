@@ -1,0 +1,22 @@
+{
+  "name": "heroesproject",
+  "version": "1.0.0",
+  "description": "hero management system",
+  "main": "index.js",
+  "scripts": {
+    "test": "protractor conf.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TayJacon/heroesProject.git"
+  },
+  "keywords": [
+    "protractor"
+  ],
+  "author": "Taynara Jacon",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TayJacon/heroesProject/issues"
+  },
+  "homepage": "https://github.com/TayJacon/heroesProject#readme"
+}
