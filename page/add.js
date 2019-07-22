@@ -9,13 +9,13 @@ class AddPage {
         this.heroIamge = Path;
     }
 
-    go() {
-        browser.get(this.path);
+    async go() {
+        await browser.get(this.path);
     }
 
-    saveButton() {
+    async saveButton() {
         browser.executeScript("window.scrollTo(0,document.body.scrollHeight);");
-        this.locator.saveButton.click();
+        await this.locator.saveButton.click();
     }
 
     async fillForm(name) {
@@ -36,14 +36,14 @@ class AddPage {
     async selectSpecoalities() {
         this.locator.specialties.click();
         var number = await this.locator.specialtiesOptions.count();
-        await this.locator.specialtiesOptions.get(await Math.floor((Math.random() * number) + 1)).click();
+        await this.locator.specialtiesOptions.get(await Math.floor((Math.random() * number) - 1)).click();
         
     }
 
     async selectClass() {
         this.locator.heroesClass.click();
         var number = await this.locator.classOptions.count();
-        await this.locator.classOptions.get(await Math.floor((Math.random() * number) + 1)).click();
+        await this.locator.classOptions.get(await Math.floor((Math.random() * number) - 1)).click();
     }
 }
 module.exports = AddPage;

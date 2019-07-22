@@ -20,6 +20,7 @@ class Locators {
     this.classOptions = element.all(by.css('.v-list__tile__title'))
     this.newButton = element(by.css('.search__new'))
     this.searchField = element(by.name('search'))
+    this.results = element(by.css('.v-datatable tbody'))
     }
 };
 module.exports = Locators;

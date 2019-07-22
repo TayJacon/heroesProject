@@ -1,7 +1,7 @@
 // Config file for Protractor
 
 exports.config = {
-    directConnect: true,
+    // directConnect: true,
     framework: 'jasmine2',
     specs: ['specs/*_spec.js'],
     suites: {
@@ -58,5 +58,11 @@ exports.config = {
         chromeOptions: {
             args: ['--start-maximized']
         }
-    }
+    },
+    allScriptsTimeout: 15000,
+    getPageTimeout: 10000,
+    jasmineNodeOpts: {
+        defaultTimeoutInterval: 100000
+    },
+    // SELENIUM_PROMISE_MANAGER: false
 }

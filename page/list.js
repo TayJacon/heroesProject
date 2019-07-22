@@ -5,14 +5,16 @@ class ListPage {
     constructor() {
         this.path = '/#/personagens/lista';
         this.locator = new Locators();
+        this.EC = protractor.ExpectedConditions;
     }
 
-    go() {        
-        browser.get(this.path);
+    async go() {        
+        await browser.get(this.path);
     }
 
     async newButton() {
         await this.locator.newButton.click();
+        browser.waitForAngular();
     }
 
     searchHeroe(name) {
@@ -20,7 +22,8 @@ class ListPage {
     }
 
     async getResult() {
-        return await browser.executeScript("document.querySelector('tbody').textContent");
+        await browser.sleep(2000)
+        return await this.locator.results.getText();
     }
 }
 module.exports = ListPage;
